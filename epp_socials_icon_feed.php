@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: EPP SOCIALS PLUGIN
-Plugin URI:  https://github.com/epp2k12/tech_test
+Plugin URI:  https://github.com/epp2k12/test_tech.git
 Description: Simple Social Icons and Feeds Plugin. This is a Tech Test for my application as a web developer for Create_IT.
 Version:     1.1
 Author:      Erwinsky Presbitero
