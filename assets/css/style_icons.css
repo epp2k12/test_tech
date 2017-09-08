@@ -1,0 +1,60 @@
+.hs, .hl, .vs, .vl {
+	font-size: .6em;
+	padding: 20px;
+	border: 1px solid #8c8c8c;
+}
+
+.hs {
+	float:left;
+	width:100%;
+}
+.hs div{
+ 	float: left;
+ 	margin: 5px;
+}
+.hs img {
+	width: 40px;
+}
+
+
+.hl {
+	float:left;
+	width:100%;
+}
+
+.hl div {
+	float: left;
+	margin: 5px;
+}
+.hl img {
+	width: 80px;
+}
+
+.vs {
+	width:100%;
+	text-align:center;
+}
+.vs img {
+	vertical-align: middle;
+	width: 40px;
+}
+
+.vl {
+	width:100%;
+	text-align:center;
+}
+.vl img {
+	vertical-align: middle;
+	width: 80px;
+}
+
+#shortcode-for-socials {
+	border: 2px solid #8c8c8c;
+	padding: 20px;
+	width: 500px;
+}
+
+#preview-for-socials {
+	width: 500px;
+	padding: 20px;
+}
