@@ -1,5 +1,6 @@
 <?php 
 require_once(__ROOT__.'/includes/social_icons.php');
+require_once(__ROOT__.'/social_feeds/social_feeds.php');
 
 class Epp_Socials_Simple{
 
@@ -24,7 +25,7 @@ class Epp_Socials_Simple{
                              'wpa_page_file_path'
                             ));
 
-        add_submenu_page( 'epp-socials-dashboard', 'Epp Socials' . ' Settings', 'SOCIAL FEEDS', 'manage_options', 'analytify-settings', array(
+        add_submenu_page( 'epp-socials-dashboard', 'Epp Socials' . ' Settings', 'SOCIAL FEEDS', 'manage_options', 'epp-socials-feed', array(
                               __CLASS__,
                              'epp_settings'
                             ));
@@ -34,38 +35,25 @@ class Epp_Socials_Simple{
      */
     function wpa_page_file_path() {
 
-    $social_icon = new SocialIcons();
-    $out = $social_icon->CustomizerSocialIcons();
-    echo $out;
+      $social_icon = new SocialIcons();
+      $out = $social_icon->CustomizerSocialIcons();
+      echo $out;
 
     }
 
     function epp_settings() {
 
-        echo '<h1>EPP SOCIAL FEEDS CUSTOMIZER</h1>';
-        echo '<p id="demo">'.plugin_dir_url( __FILE__ ).'/social_feeds/tweets_json.php' .'</p>';
-        echo '<script>';
-        echo 'var xmlhttp = new XMLHttpRequest();';
-        echo 'xmlhttp.onreadystatechange = function() {';
-        echo 'if (this.readyState == 4 && this.status == 200) {';
-        echo 'myObj = JSON.parse(this.responseText);';
-        echo 'document.getElementById("demo").innerHTML = myObj[0].text;';
-        echo ' }';
-        echo '};';
-        echo 'var newURL = window.location.protocol + "//" + window.location.host + "/plugins/epp_socials/social_feeds/tweets_json.php";';
-        echo 'xmlhttp.open("GET", "http://localhost/tweetsJSON/tweets_json.php", true);';
-        echo 'xmlhttp.send();';
-        echo '</script>';
+
+      $social_feeds = new SocialFeeds();
+      $out = $social_feeds->CustomizerSocialFeeds();
+      echo $out;
 
     }
-
 
     /*
      * Actions perform on activation of plugin
      */
     function epp_social_install() {
-
-
 
     }
 

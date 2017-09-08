@@ -1,5 +1,10 @@
-
 <?php
+/*
+  This is a php class that will generate the customizer form for social media icons.
+
+  Improvements : 
+
+*/
 class SocialIcons {
 	
 	function CustomizerSocialIcons() {
@@ -20,7 +25,7 @@ class SocialIcons {
 		$output .= '			<input type="text" id="fb-id" name="fb-id" placeholder="Enter ID"/>';
 		$output .= '<br/>';
 		$output .= '			<label for="fb-label">Enter Label</label>';
-		$output .= '			<input type="text" id="fb-label" name="fb-label" placeholder="Like us on Facebook"/>';
+		$output .= '			<input type="text" id="fb-label" name="fb-label" placeholder="Like us on Facebook" maxlength="20"/> 20 chars only';
 		$output .= '</div>';
 
 		$output .= '<br/>';
@@ -31,7 +36,7 @@ class SocialIcons {
 		$output .= '			<input type="text" id="twitter-id" name="twitter-id" placeholder="Enter ID"/>';
 		$output .= '<br/>';
 		$output .= '			<label for="twitter-label">Enter Label</label>';
-		$output .= '			<input type="text" id="twitter-label" name="twitter-label" placeholder="Check out Twitter"/>';
+		$output .= '			<input type="text" id="twitter-label" name="twitter-label" placeholder="Check out Twitter" maxlength="20"/> 20 chars only';
 		$output .= '</div>';
 
 		$output .= '<br/>';
@@ -50,10 +55,6 @@ class SocialIcons {
   		$output .= '<br/><br/>';
   		$output .= '<h4>VIEW PREVIEW HERE</h4>';
   		$output .= '<div id="preview-for-socials"></div>';
-
-
-
-  
 
 		return $output;
 	}
